@@ -7,7 +7,7 @@ class Assignment2:
 
     def sayWelcome(self, name):
         self.name = name
-        print(f'Welcome to the assignment, {self.name}! We havent seen you in {self.age} years.')
+        print(f'Welcome to the assignment, {self.name}! Haven\'t seen you for {self.age} years!')
 
 
     def doubleList(self, list):
@@ -21,16 +21,14 @@ class Assignment2:
             newList.append(fill)
 
         for word in list:
-            for character in word:
                 temp = temp + 1
                 if ((temp % 2) != 0):
-                    newList.append(character)
+                    newList.append(word)
 
         for word in list:
-         for character in word:
             temp = temp + 1
             if ((temp % 2) == 0):
-               newList.append(character)
+               newList.append(word)
             
 
         return newList
@@ -86,5 +84,6 @@ class Assignment2:
         except:
             return False
 
-
-
+p1 = Assignment2(53)
+p1.sayWelcome("Ethan")
+print(p1.doubleList(["foo", "bar", "a","b" ,"c","d"]))
