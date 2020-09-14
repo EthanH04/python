@@ -7,7 +7,7 @@ class Assignment2:
 
     def sayWelcome(self, name):
         self.name = name
-        print(f'Welcome to the assignment, {self.name}! Haven\'t seen you for {self.age} years!')
+        print(f'Welcome to the assignment, {self.name}!Haven\'t seen you for {self.age} years!')
 
 
     def doubleList(self, list):
@@ -33,10 +33,10 @@ class Assignment2:
 
         return newList
 
-    def modifyString(self, strg):
+    def modifyString(self, name):
         place = 0
-        res = strg
-        for chara in strg:
+        res = name
+        for chara in name:
             place += 1
             if place % 3 == 0:
                 res = res[:place - 1] + res[place - 1].upper() + res[place:]
@@ -67,7 +67,7 @@ class Assignment2:
             return False
         if upperCount < 3 and lowerCount < 2:
             return False
-        if specialCount < 2:
+        if specialCount < 2 and digitCount < 1:
             return False
         else:
             return True
@@ -84,6 +84,3 @@ class Assignment2:
         except:
             return False
 
-p1 = Assignment2(53)
-p1.sayWelcome("Ethan")
-print(p1.doubleList(["foo", "bar", "a","b" ,"c","d"]))
